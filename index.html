@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Boxicons -->
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/style.css">
+
+        <title>Generator Password</title>
+    </head>
+
+    <body>
+
+        <header class="header">
+            <div class="brand-menu-container">
+                <h3>Generator Password</h3>
+                <div class="menu-toggle-container"><i class="fas fa-bars"></i></div>
+            </div>
+            <ul class="menu">
+                <li><a href="#home" class="btn">Início</a></li>
+                <li><a href="#security" class="btn">Senha</a></li>
+                <li><a href="#exclusive" class="btn">Dicas</a></li>
+                <li><a href="#" class="btn">Contato</a></li>
+            </ul>
+        </header>
+
+        <main class="home" id="home">
+            <div class="main_container">
+                <h2>Precisa de uma senha? Experimente o gerador de senhas:</h2>
+                <div class="result-container">
+                    <span id="result"></span>
+                    <button class="btn" id="clipboard">
+                        <i class='bx bxs-copy-alt' ></i>
+                    </button>
+                </div>
+                <div class="settings">
+                    <div class="setting">
+                        <label>Número de caracteres</label>
+                        <input type="number" id="length" min='4' max='20' value='20' />
+                    </div>
+                    <div class="setting">
+                        <label>Letra maiúscula</label> 
+                        <input type="checkbox" id="uppercase" checked />
+                    </div>
+                    <div class="setting">
+                        <label>Letra minúscula</label> 
+                        <input type="checkbox" id="lowercase" checked />
+                    </div>
+                    <div class="setting">
+                        <label>Números</label> 
+                        <input type="checkbox" id="numbers" checked />
+                    </div>
+                    <div class="setting">
+                        <label>Símbolos</label> 
+                        <input type="checkbox" id="symbols" checked />
+                    </div>
+                </div>
+                <button class="btn btn-large" id="generate">
+                    Gerar senha segura
+                </button>
+            </div>
+        </main>
+
+        <div class="text-home">
+            <h1>O que torna uma senha forte?</h1>
+        </div>
+
+        <section class="security" id="security">
+            <div class="security_container">
+                <div class="security_img">
+                    <img src="img/secure-server.svg" alt="">
+                </div>
+                
+                <div class="security_data">
+                    <h1 class="security_title">Senhas fortes são exclusivas e aleatórias.</h1>
+                    <p class="security_description">As senhas são uma ameaça real. Mais de 80% das violações por hacks acontecem devido a senhas fracas ou roubadas, de acordo com um relatório recente. Por isso, se você deseja proteger suas informações pessoais e recursos, a criação de senhas seguras é o primeiro grande passo. Alterar suas senhas para cada site ou aplicativo também ajuda a se proteger contra ataques de hackers.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="exclusive" id="exclusive">
+            <div class="exclusive_container">
+                <div class="exclusive_data">
+                    <h1 class="exclusive_title">Por que minha senha deve ser exclusiva?</h1>
+                    <p class="exclusive_description">Se você utilizar a mesma senha para acessar sua conta de email e sua conta bancária, um invasor precisará roubar somente uma senha para ter acesso a ambas as contas, duplicando a exposição. Se você utilizou a mesma senha em 14 contas diferentes, está facilitando muitíssimo o trabalho do invasor. Você pode se proteger utilizando um gerador para criar senhas únicas e fáceis de memorizar.</p>
+                </div>
+
+                <div class="exclusive_img">
+                    <img src="img/password-same.svg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
