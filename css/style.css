@@ -33,43 +33,14 @@ h2 {
 	text-align: center;
 }
 
+span {
+    color: #f6d2b6;
+    font-weight: bold;
+}
+
 /*  */
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 99;
-    width: 90%;
-    margin-bottom: 3rem;
-}
 
-
-.menu-toggle-container {
-    font-size: 3rem;
-    color: var(--secondary-color);
-    cursor: pointer;
-    display: none;
-}
-
-.menu {
-    display: flex;
-    align-items: center;
-    list-style: none;
-}
-
-.menu li a {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--color-text);
-    padding: 1rem;
-    margin-right: 1.5rem;
-    text-decoration: none;
-}
-
-.menu .btn:hover  {
-    border-radius: 5px;
-}
 
 /*  */
 
@@ -126,6 +97,7 @@ input[type=checkbox]:checked::after {
 	width: 90%;
 	max-width: 100%;
     border-radius: 5px;
+    margin-top: 4rem;
 }
 
 .result-container {
@@ -198,8 +170,12 @@ input[type=checkbox]:checked::after {
 /*  */
 
 .security, 
-.exclusive {
+.exclusive{
     width: 70%;
+}
+
+.exclusive {
+    margin-top: 5rem;
 }
 
 .security_container, 
@@ -221,7 +197,8 @@ input[type=checkbox]:checked::after {
 }
 
 .security_description, 
-.exclusive_description{
+.exclusive_description,
+.tips_description {
     font-size: 18px;
     text-align: justify;
 }
@@ -229,4 +206,60 @@ input[type=checkbox]:checked::after {
 .exclusive_data {
     width: 60%;
     margin-right: 50px;
+}
+
+.tips {
+    width: 80%;
+}
+
+.tips_data {
+    margin-bottom: 2rem;
+}
+
+
+@media screen and (max-width: 1148px) {
+
+    .security,
+    .exclusive {
+        width: 130%;
+    }
+
+    .security_container, 
+    .exclusive_container {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .exclusive_img {
+        order: -1;
+    }
+
+    .security_data, 
+    .exclusive_data {
+        margin: 0;
+    }
+
+    .security_title, 
+    .exclusive_title {
+        text-align: center;
+    }
+}
+
+
+
+
+::-webkit-scrollbar {
+    width: 0.6rem;
+    background: var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #29343b;
+    border-radius: .5rem;
+    transition: all ease .2s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1f2732;
 }
