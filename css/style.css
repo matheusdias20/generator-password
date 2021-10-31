@@ -48,11 +48,13 @@ span {
 /*  */
 
 nav {
-    background-color: var(--primary-color);
+    background: var(--primary-color);
     justify-content: space-between;
     align-items: center;
     width: 90%;
     margin-top: 1rem;
+    margin-bottom: 3rem;
+    z-index: 99;
 }
 
 nav, ul {
@@ -307,29 +309,32 @@ footer {
 }
 
 
-button:focus ~ ul {
-    height: 250px;
-} 
 
 @media screen and (max-width: 868px) {
-    nav, ul {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0;
+        left: 10px;
+        top: 8vh;
+        height: 30vh;
+        display: flex;
         flex-direction: column;
-        align-items: unset ;
+        align-items: center;
+        background-color: var(--primary-color);
+        transform: translateX(100%);
+        transition:  transform 0.5 ease-in;
     }
 
-    ul {
-        text-align: center;
-        height: 0;
-    }
-
-    nav {
-        padding: 0;
-        margin-bottom: 1rem;
-
-    }
 
     nav button {
         display: block;
+    }
+
+    .nav-active {
+        transform: translateX(0%)
     }
 
 }
