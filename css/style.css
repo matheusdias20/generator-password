@@ -23,6 +23,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	min-height: 50vh;
+    overflow-x: hidden;
 }
 
 p {
@@ -273,6 +274,8 @@ input[type=checkbox]:checked::after {
         text-align: center;
     }
 
+
+
     .security,
     .exclusive {
         width: 130%;
@@ -311,35 +314,48 @@ footer {
 
 
 @media screen and (max-width: 868px) {
-    body {
-        overflow-x: hidden;
-    }
     .nav-links {
         position: absolute;
         right: 0;
-        left: 10px;
+        left: 0;
         top: 8vh;
         height: 30vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         background-color: var(--primary-color);
-        transform: translateX(100%);
+        transform: translateY(-200%);
         transition:  transform 0.5 ease-in;
+        z-index: -1;
     }
 
+    .nav-links li{
+        opacity: 0;
+    }
 
-    nav button {
+    .burguer{
         display: block;
     }
 
-    .nav-active {
-        transform: translateX(0%)
-    }
+
 
 }
 
+.nav-active {
+        transform: translateX(0%)    
+}
 
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
 
 ::-webkit-scrollbar {
     width: 0.6rem;
