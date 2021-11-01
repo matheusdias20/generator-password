@@ -23,17 +23,21 @@ body {
 	align-items: center;
 	justify-content: center;
 	min-height: 50vh;
+
     overflow-x: hidden;
+
 }
 
 p {
 	margin: 5px 0;
 }
 
+
 h2 {
 	margin: 10px 0 20px;
 	text-align: center;
 }
+
 
 li, ul, a {
     list-style: none;
@@ -270,15 +274,21 @@ input[type=checkbox]:checked::after {
 
 
 @media screen and (max-width: 1148px) {
+    body {
+        overflow-x: hidden;
+    }
+
     h1 {
         text-align: center;
     }
 
-
+    .text-home {
+        margin: 4rem 20px;
+    }
 
     .security,
     .exclusive {
-        width: 130%;
+        width: 100%;
     }
 
     .security_container, 
@@ -295,11 +305,13 @@ input[type=checkbox]:checked::after {
     .security_data, 
     .exclusive_data {
         margin: 0;
+        width: 80%;
     }
 
     .security_title, 
     .exclusive_title {
         text-align: center;
+        margin-bottom: 2rem;
     }
 }
 
